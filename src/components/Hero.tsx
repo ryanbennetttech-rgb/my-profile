@@ -35,7 +35,7 @@ const Hero = () => {
           </p>
           <div className="mt-8 flex gap-6 justify-center text-sm text-muted-foreground">
             <span className="flex items-center gap-2">
-             📩 Email: ryanbennett.tech@gmail.com
+             📩 Email: ryanbennett.tech@gmail.com, 🔗 Fiverr Account: ryantechstack
             </span>
           </div>
           <div className="mt-8 flex gap-6 justify-center text-sm text-muted-foreground">
