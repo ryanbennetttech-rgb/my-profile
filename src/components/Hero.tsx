@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import profileImg from "@/assets/profile.jpg";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -18,6 +20,10 @@ const Hero = () => {
       {/* Content */}
       <div className="container relative z-10 mx-auto px-4 py-20 text-center">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-1000">
+          <Avatar className="w-32 h-32 mx-auto mb-8 ring-4 ring-primary/20">
+            <AvatarImage src={profileImg} alt="Ryan Bennett" />
+            <AvatarFallback>RB</AvatarFallback>
+          </Avatar>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
             Ryan Bennett
           </h1>
