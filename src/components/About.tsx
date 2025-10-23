@@ -5,8 +5,8 @@ const About = () => {
   const services = [
     {
       icon: Palette,
-      title: "UI/UX Design",
-      description: "Creating modern interfaces and seamless user experiences that delight users and drive engagement.",
+      title: "UI/UX / Print Design",
+      description: "Blending digital innovation with print creativity, crafting seamless user experiences and visually striking flyers, brochures, and program booklets.",
     },
     {
       icon: Code2,

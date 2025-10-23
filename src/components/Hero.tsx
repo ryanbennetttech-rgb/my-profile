@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
-import heroBg from "@/assets/hero-bg.jpg";
-import profileImg from "@/assets/profile.jpg";
+import heroBg from "/assets/images/hero-bg.jpg";
+import profileImg from "/assets/images/ryann.jpeg";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
@@ -33,15 +33,10 @@ const Hero = () => {
           <p className="text-lg text-foreground/80 mb-8 max-w-2xl mx-auto">
             Professional UI/UX Designer & Web Developer with 10+ years of global experience
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="group">
-              View My Work
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="outline" size="lg">
-              <Mail className="mr-2 h-4 w-4" />
-              Get in Touch
-            </Button>
+          <div className="mt-8 flex gap-6 justify-center text-sm text-muted-foreground">
+            <span className="flex items-center gap-2">
+             📩 Email: ryanbennett.tech@gmail.com
+            </span>
           </div>
           <div className="mt-8 flex gap-6 justify-center text-sm text-muted-foreground">
             <span className="flex items-center gap-2">

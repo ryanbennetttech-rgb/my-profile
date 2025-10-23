@@ -1,37 +1,43 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
   const webProjects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and Stripe integration. Features include product management, cart functionality, and secure checkout.",
-      tags: ["React", "Node.js", "Stripe", "MongoDB"],
-      link: "#",
-      github: "#",
+      title: "Cross-Platform Booking Web App",
+      description:
+        "Collaborated with a digital agency to develop a full-stack booking web app for a hospitality startup. The platform enables users to browse properties, book dates, and make secure payments seamlessly. Features include JWT authentication, API rate limiting, and Stripe integration for transactions. Built with Node.js, Express, PostgreSQL, React, and Tailwind CSS. Optimized for mobile with an admin dashboard for property owners.",
+      tags: ["React", "Node.js", "Express", "PostgreSQL", "Stripe", "Tailwind"],
+      image: "/assets/images/crossplatform.png", 
+      priceRange: "$1000 - $2500",
+      duration: "1 - 3 months",
+      industries: "Hospitality, Real Estate",
     },
     {
-      title: "SaaS Dashboard",
-      description: "Modern admin dashboard with data visualization, user management, and real-time analytics. Built with Next.js and TypeScript.",
-      tags: ["Next.js", "TypeScript", "Chart.js", "Tailwind"],
-      link: "#",
-      github: "#",
+      title: "API + Base64 Integration for Client App",
+      description:
+        "Partnered with a software agency to integrate secure Base64 encoding and third-party APIs into a client’s internal dashboard. Implemented encoded document uploads, encrypted data transfer, and automated verification while maintaining backward compatibility. Optimized API handling to reduce failures by over 60% and added advanced error logging and fallback mechanisms for improved stability.",
+      tags: ["JavaScript", "API Integration", "Base64", "Node.js", "Security"],
+      image: "/assets/images/api-integration.jpg",
+      priceRange: "$1000 - $2500",
+      duration: "1 - 3 months",
+      industries: "Fintech, SaaS",
     },
   ];
 
   const designProjects = [
     {
       title: "Corporate Event Program",
-      description: "Multi-page program booklet design for a tech conference, featuring modern layouts, typography, and brand integration.",
+      description:
+        "Multi-page program booklet design for a tech conference, featuring modern layouts, typography, and brand integration.",
       tags: ["Print Design", "InDesign", "Branding", "Typography"],
-      link: "#",
+      image: "/assets/images/event-program.jpg",
     },
     {
       title: "Marketing Collateral Suite",
-      description: "Complete brand identity package including brochures, business cards, and promotional materials for a startup.",
+      description:
+        "Complete brand identity package including brochures, business cards, and promotional materials for a startup.",
       tags: ["Graphic Design", "Illustrator", "Brand Identity", "Print"],
-      link: "#",
+      image: "/assets/images/marketing-suite.jpg",
     },
   ];
 
@@ -47,13 +53,20 @@ const Projects = () => {
 
         {/* Web Development Projects */}
         <div className="mb-16">
-          <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-center">Web Development</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-8 text-center">
+            Web Development
+          </h3>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {webProjects.map((project, index) => (
               <Card
                 key={index}
-                className="bg-card border-border hover:shadow-xl transition-all duration-300 group"
+                className="bg-card border-border hover:shadow-xl transition-all duration-300 group overflow-hidden"
               >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <CardHeader>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {project.title}
@@ -73,14 +86,16 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                    <Button variant="ghost" size="sm">
-                      <Github className="h-4 w-4" />
-                    </Button>
+                  <div className="text-sm text-muted-foreground space-y-1">
+                    <p>
+                      <strong>Price range:</strong> {project.priceRange}
+                    </p>
+                    <p>
+                      <strong>Project duration:</strong> {project.duration}
+                    </p>
+                    <p>
+                      <strong>Industries:</strong> {project.industries}
+                    </p>
                   </div>
                 </CardContent>
               </Card>
@@ -95,8 +110,13 @@ const Projects = () => {
             {designProjects.map((project, index) => (
               <Card
                 key={index}
-                className="bg-card border-border hover:shadow-xl transition-all duration-300 group"
+                className="bg-card border-border hover:shadow-xl transition-all duration-300 group overflow-hidden"
               >
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
                 <CardHeader>
                   <CardTitle className="text-xl group-hover:text-primary transition-colors">
                     {project.title}
@@ -106,7 +126,7 @@ const Projects = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
@@ -116,10 +136,6 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="w-full">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Portfolio
-                  </Button>
                 </CardContent>
               </Card>
             ))}

@@ -22,15 +22,34 @@ const Contact = () => {
                   and everything in between.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-                  <Button variant="hero" size="lg" className="group">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Contact via Email
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    <MessageSquare className="mr-2 h-5 w-5" />
-                    Message on Fiverr
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </Button>
+                 <Button
+  asChild
+  variant="hero"
+  size="lg"
+  className="group"
+>
+  <a href="mailto:ryanbennett.tech@gmail.com">
+    <Mail className="mr-2 h-5 w-5" />
+    Contact via Email
+  </a>
+</Button>
+
+<Button
+  asChild
+  variant="outline"
+  size="lg"
+>
+  <a
+    href="https://www.fiverr.com/s/Eg1zVDq"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MessageSquare className="mr-2 h-5 w-5" />
+    Message on Fiverr
+    <ExternalLink className="ml-2 h-4 w-4" />
+  </a>
+</Button>
+
                 </div>
               </div>
 
